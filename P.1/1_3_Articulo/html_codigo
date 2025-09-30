@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad_3</title>
+    <style>
+        body
+        {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor" text align = "center">
+        <h1>Monster Hunter</h1><br><br>
+        <h4>Barioth</h4>
+        <img src="https://th.bing.com/th/id/R.bcd20418c46fe63157ddcdf900ec2d50?rik=9JeKz0Ch04LlIA&riu=http%3a%2f%2fimg2.wikia.nocookie.net%2f__cb20150304014941%2fmonsterhunter%2fimages%2fd%2fd8%2f3rdGen-Barioth_Render_001.png&ehk=QgzUtOBJNeU8LydCVJlo%2bLwOIR5Q9tgLcuiQC16vSxM%3d&risl=&pid=ImgRaw&r=0" alt="Barioth" width="300" align="center right">
+        <br><br><br>
+        <em><h4>"Wyverns que reinan en la tundra helada. Usan sus enormes colmillos y sus pinchos para moverse libremente por el hielo, lo que hace muy difícil seguirles el ritmo."</h4></Em>
+    </div>
+<style>
+    .cuadro
+    {
+        border: 2px solid;
+    }
+</style>
+    <div>
+        <div class = "cuadro">
+        <p>El Barioth es un monstruo cuadrúpedo cuyas alas se han convertido parcialmente en patas. Su lomo está protegido por un caparazón blanco, mientras que el resto de su cuerpo está cubierto de un pelaje blanco también. Además, sus alas y patas poseen afilados pinchos y garras para aferrarse al hielo. Su cabeza es corta y posee dos prominentes colmillos de color ámbar, mientras que su cola es larga y se divide en dos en la punta.</p>
+    </div>
+</body>
+</html>

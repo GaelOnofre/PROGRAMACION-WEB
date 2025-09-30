@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Formulario</title>
+    
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post" target="resultadoPOST">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="nombre">
+        
+        <label for="apellido">Apellido</label>
+        <input id="apellido" type="text" name="apellido">
+
+        <label for="correo">Correo</label>
+        <input id="correo" type="text" name="correo">
+
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <iframe name="resultadoPOST"></iframe>
+</body>
+</html>
