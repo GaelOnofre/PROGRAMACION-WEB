@@ -1,0 +1,13 @@
+{
+  "name": "mi-proyecto-cowsay",
+  "version": "1.0.0",
+  "description": "Un simple ejemplo con el paquete cowsay",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
