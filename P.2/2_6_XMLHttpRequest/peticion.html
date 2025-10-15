@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Botón Api :D</button>
+    <div id="resp"></div>
+    <img id="resp2" width="300">
+
+    <script>
+        document.getElementById("btn").addEventListener("click",cargarDatos)
+
+        function cargarDatos(){
+            let solicitud = new XMLHttpRequest();
+
+            solicitud.onload = function(){
+                console.log(solicitud.response);
+
+                let objetoJs = JSON.parse(solicitud.response)
+                console.log(objetoJs);
+
+                document.getElementById("resp").innerHTML = objetoJs.value;
+            }
+            solicitud.open("GET","https://api.chucknorris.io/jokes/random",true)
+            solicitud.send()
+        }
+    </script>
+</body>
+</html>
