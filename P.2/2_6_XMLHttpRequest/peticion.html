@@ -8,10 +8,12 @@
 <body>
     <button id="btn">Botón Api :D</button>
     <div id="resp"></div>
-    <img id="resp2" width="300">
+    <button id="btn2">Botón Fetch</button>
+    <div id="resp2"></div>
 
     <script>
         document.getElementById("btn").addEventListener("click",cargarDatos)
+        document.getElementById("btn2").addEventListener("click",cargarDatosFetch)
 
         function cargarDatos(){
             let solicitud = new XMLHttpRequest();
@@ -27,6 +29,23 @@
             solicitud.open("GET","https://api.chucknorris.io/jokes/random",true)
             solicitud.send()
         }
+
+        function cargarDatosFetch() {
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json()) 
+        .then(data => {
+            console.log(data);
+            document.getElementById("resp2").innerHTML = data.value;
+        })
+        .catch(err => console.error(err));
+}
+        
+    </script>
+
+    <script>
+        
+        
+
     </script>
 </body>
 </html>
