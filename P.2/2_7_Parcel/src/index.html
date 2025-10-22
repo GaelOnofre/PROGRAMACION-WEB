@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter enciclopedia de monstruos</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/monster-hunter" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+    <div class="Titulo">
+        <h1>Monster Hunter</h1>
+        <p class="subtitulo">Enciclopedia monstruosa</p>
+    </div>
+    
+    <div class="cuadro-imagen-Barioth">
+        <h4>Barioth</h4>
+        <img class="barioth-imagen imagen-video-trigger" src="imagenes/barioth.webp" alt="Barioth" data-video-src="videos/barioth.mp4">
+        <em class="cita">"Wyverns que reinan en la tundra helada. Usan sus enormes colmillos y sus pinchos para moverse libremente por el hielo, lo que hace muy difícil seguirles el ritmo."</em>
+    </div>
+
+    <div class="cuadro-descripcion-Barioth">
+        <p>El Barioth es un monstruo cuadrúpedo cuyas alas se han convertido parcialmente en patas. Su lomo está protegido por un caparazón blanco, mientras que el resto de su cuerpo está cubierto de un pelaje blanco también. Además, sus alas y patas poseen afilados pinchos y garras para aferrarse al hielo. Su cabeza es corta y posee dos prominentes colmillos de color ámbar, mientras que su cola es larga y se divide en dos en la punta.</p>
+    </div>
+
+    <div class="cuadro-imagen-Brachy">
+        <h4>Brachydios</h4>
+        <img class="Brachydios-imagen imagen-video-trigger" src="imagenes/Brachydios.webp" alt="Brachydios" data-video-src="videos/brachydios.mp4">
+        <em class="cita">"Un wyvern brutal que usa su saliva para recubrir sus patas delanteras de una baba pegajosa y explosiva"</em>
+    </div>
+
+    <div class="cuadro-descripcion-Brachy">
+        <p>Como otros Wyverns brutales, el Brachydios se asemeja a un dinosaurio. Su cuerpo robusto está protegido por una coraza de color azul violáceo, mientras que sus desarrollados brazos y su cuerno en forma de torpedo están recubiertos de una sustancia verde neón que se torna amarilla cuando se enfada. Su cola acaba en una maza en forma de corona.</p>
+    </div>
+
+    <div class="cuadro-imagen-Glavenus">
+        <h4>Glavenus</h4>
+        <img class="Glavenus-imagen imagen-video-trigger" src="imagenes/Glavenus.webp" alt="Glavenus" data-video-src="videos/glavenus.mp4">
+        <em class="cita">"Un wyvern brutal que blande su pesada cola como una espada. Acumula calor con cada golpe hasta ponerse rojo."</em>
+    </div>
+
+    <div class="cuadro-descripcion-Glavenus">
+        <p>Está basado en un Carnotaurus, y su concepto es muy similar al del Abiorugu de Monster Hunter Frontier. Su enorme cabeza tiene dos grandes cuernos y su lomo está cubierto con placas en forma de llama que apuntan hacia delante. Su coloración es de color azul oscuro y rojo. Lo que más destaca de este monstruo es su enorme cola en forma de espada de color azul metálico que se torna rojo brillante cuando la calienta con sus colmillos o con la fricción contra el suelo.</p>
+    </div>
+</main>
+
+    <div id="modal-video" class="modal-overlay">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <video id="video-player" width="1080" controls></video>
+        </div>
+    </div>
+    
+    <script src="index.js "></script>
+</body>
+</html>
