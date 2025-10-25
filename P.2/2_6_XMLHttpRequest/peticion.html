@@ -10,10 +10,13 @@
     <div id="resp"></div>
     <button id="btn2">Botón Fetch</button>
     <div id="resp2"></div>
+    <button id="btn3">Botón FetchAA</button>
+    <div id="resp3"></div>
 
     <script>
         document.getElementById("btn").addEventListener("click",cargarDatos)
         document.getElementById("btn2").addEventListener("click",cargarDatosFetch)
+        document.getElementById("btn3").addEventListener("click",cargarDatosFetchAA)
 
         function cargarDatos(){
             let solicitud = new XMLHttpRequest();
@@ -39,13 +42,16 @@
         })
         .catch(err => console.error(err));
 }
-        
-    </script>
 
-    <script>
-        
+async function cargarDatosFetchAA() {
+        respuesta = await fetch("https://api.chucknorris.io/jokes/random")
+        datojson = await respuesta.json()
+        .then(datojson => {
+            console.log(datojson);
+            document.getElementById("resp3").innerHTML = datojson.value;})
+}
         
 
-    </script>
+</script>
 </body>
 </html>
