@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <button id="btn2">Botón Fetch</button>
     <div id="resp2"></div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js">
+    <script>
+           
 
-          /*document.getElementById("btn2").addEventListener("click",cargarDatosFetch)
+           $(document).ready(function(){
 
-        function cargarDatosFetch() {
-        fetch("https://api.chucknorris.io/jokes/random")
-        .then(response => response.json()) 
-        .then(data => {
-            console.log(data);
-            document.getElementById("resp2").innerHTML = data.value;
-        })
-        .catch(err => console.error(err));
-        
-}
+            $("#btn2").on("click", function() {
+
+            $.ajax({
+                url: "https://api.chucknorris.io/jokes/random",
+                method: "GET",
+                success: function(data) {
+                    console.log(data);
+                    $("#resp2").html(data.value);
+                }
+            })
+            })
+           })
     </script>
       
         

@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--framework Classless-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     
-    
-    <title>Practica Formulario</title>
+    <title>Practica Formulario </title>
     
 </head>
 <body>
-    <form action="https://httpbin.org/post" method="post" target="resultadoPOST" class="pure-form">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="nombre">
-        
-        <label for="apellido">Apellido</label>
-        <input id="apellido" type="text" name="apellido">
+    <form id="miFormulario" action="https://httpbin.org/post" method="post" target="resultadoPOST" class="pure-form">
 
-        <label for="correo">Correo</label>
-        <input id="correo" type="text" name="correo">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre" >
+            
+            <label for="apellido">Apellido</label>
+            <input id="apellido" type="text" name="apellido" >
 
-        <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+            <label for="correo">Correo</label>
+            <input id="correo" type="email" name="correo">
+
+            <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+            
+            <button type="submit" id="btnEnviarJS" class="pure-button pure-button-primary">Enviar con JavaScript (Fetch)</button>
     </form>
     
     <iframe name="resultadoPOST"></iframe>
+
+    <script>
+        const miFormulario = document.getElementById('miFormulario');
+        const btnEnviarJS = document.getElementById('btnEnviarJS');
+
+        btnEnviarJS.addEventListener('click', () => {
+
+            const datosForm = new FormData(miFormulario);
+            const cadenaUrl = new URLSearchParams(datosForm).toString();
+
+            fetch('https://httpbin.org/post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: cadenaUrl
+            })
+            .then(response => response.json())
+            .then(dato => {
+                console.log(dato);
+            })
+
+        });
+    </script>
 </body>
 </html>

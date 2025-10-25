@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--framework Classless-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    
+    
+    <title>Practica Formulario</title>
+    
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post" target="resultadoPOST" class="pure-form">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="nombre">
+        
+        <label for="apellido">Apellido</label>
+        <input id="apellido" type="text" name="apellido">
+
+        <label for="correo">Correo</label>
+        <input id="correo" type="text" name="correo">
+
+        <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+    </form>
+    
+    <iframe name="resultadoPOST"></iframe>
+</body>
+</html>
